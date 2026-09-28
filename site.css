@@ -1,0 +1,268 @@
+body {
+    background: pink;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 40px 20px;
+}
+
+
+/* TITLE */
+
+h1 {
+    color: #d6336c;
+    font-size: 40px;
+}
+
+h2 {
+    color: #d6336c;
+}
+
+
+/* NORMAL TEXT */
+
+p {
+    color: #333;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* LINE */
+
+hr {
+    width: 60%;
+    border: none;
+    border-top: 2px solid #ff8fab;
+    margin: 30px auto;
+}
+
+
+/* BUTTON */
+
+button {
+    background: #d6336c;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #b52b59;
+    transform: scale(1.05);
+}
+
+
+/* MAIN HEART */
+
+.heart {
+    width: 100px;
+    height: 100px;
+
+    background: #ff4d6d;
+
+    position: relative;
+
+    transform: rotate(-45deg);
+
+    margin: 50px auto;
+
+    animation: heartbeat 1.5s infinite;
+
+    cursor: pointer;
+}
+
+
+/* HEART CIRCLES */
+
+.heart::before,
+.heart::after {
+    content: "";
+
+    width: 100px;
+    height: 100px;
+
+    background: #ff4d6d;
+
+    border-radius: 50%;
+
+    position: absolute;
+}
+
+.heart::before {
+    top: -50px;
+    left: 0;
+}
+
+.heart::after {
+    top: 0;
+    left: 50px;
+}
+
+
+/* HEARTBEAT */
+
+@keyframes heartbeat {
+
+    0% {
+        transform: rotate(-45deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(-45deg) scale(1.1);
+    }
+
+    100% {
+        transform: rotate(-45deg) scale(1);
+    }
+
+}
+
+
+/* HEART MESSAGE */
+
+#heartMessage {
+    color: #d6336c;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    min-height: 30px;
+}
+
+
+/* LOVE LETTER */
+
+.letter {
+
+    display: none;
+
+    position: relative;
+
+    max-width: 700px;
+
+    margin: 60px auto;
+
+    padding: 55px 60px;
+
+    background: #fff5f7;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.15);
+
+    text-align: left;
+}
+
+
+/* LETTER CONTENT */
+
+.letter-content {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* HANDWRITTEN HEADINGS */
+
+.letter h2 {
+
+    font-family: "Caveat", cursive;
+
+    font-size: 34px;
+
+    color: #d6336c;
+
+}
+
+
+/* HANDWRITTEN LETTER */
+
+.letter p {
+
+    font-family: "Caveat", cursive;
+
+    font-size: 25px;
+
+    line-height: 1.4;
+
+    color: #333;
+
+}
+
+
+/* LETTER OPEN ANIMATION */
+
+.letter.show {
+
+    display: block;
+
+    animation: fadeIn 1s ease;
+
+}
+
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* KISSING EMOJIS */
+
+.kiss {
+
+    position: absolute;
+
+    font-size: 35px;
+
+    animation: kissPop 0.5s ease;
+
+    pointer-events: none;
+
+    z-index: 5;
+
+}
+
+
+@keyframes kissPop {
+
+    from {
+
+        opacity: 0;
+
+        transform: scale(0);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+}

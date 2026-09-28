@@ -1,4 +1,5 @@
 const photos = [
+
     "zylah1.png",
     "zylah2.png",
     "zylah3.jpg",
@@ -44,78 +45,132 @@ const photos = [
     "zylah43.jpg",
     "zylah44.jpg",
     "zylah45.jpg"
+
 ];
+
 
 let currentPhoto = 0;
 
-const photo = document.getElementById("zylahPhoto");
-const photoNumber = document.getElementById("photoNumber");
-const photoTitle = document.getElementById("photoTitle");
 
-const previousBtn = document.getElementById("previousBtn");
-const nextBtn = document.getElementById("nextBtn");
+const photo =
+    document.getElementById("zylahPhoto");
 
+const photoNumber =
+    document.getElementById("photoNumber");
+
+const photoTitle =
+    document.getElementById("photoTitle");
+
+const previousBtn =
+    document.getElementById("previousBtn");
+
+const nextBtn =
+    document.getElementById("nextBtn");
+
+
+/* =========================
+   SHOW PHOTO
+========================= */
 
 function showPhoto() {
 
-    photo.style.opacity = "0";
+    /*
+        Change the image immediately.
+        No setTimeout.
+        No fade delay.
+    */
 
-    setTimeout(() => {
+    photo.src =
+        "../zylahspic/" + photos[currentPhoto];
 
-        photo.src = "../zylahspic/" + photos[currentPhoto];
 
-        photo.style.opacity = "1";
-
-    }, 150);
+    /* Photo counter */
 
     photoNumber.textContent =
         `${currentPhoto + 1} / ${photos.length}`;
 
+
+    /* Photo title */
+
     if (currentPhoto === 0) {
 
-        photoTitle.textContent = "Baby Zylah 🐾";
+        photoTitle.textContent =
+            "Baby Zylah 🐾";
 
-    } else if (currentPhoto < 10) {
-
-        photoTitle.textContent = "Little Zylah 🐶💗";
-
-    } else if (currentPhoto < 25) {
-
-        photoTitle.textContent = "Growing Zylah 🐾❤️";
-
-    } else if (currentPhoto < 40) {
-
-        photoTitle.textContent = "Big Girl Zylah 🐶💕";
-
-    } else {
-
-        photoTitle.textContent = "Our Beautiful Zylah ❤️🐾";
     }
+
+    else if (currentPhoto < 10) {
+
+        photoTitle.textContent =
+            "Little Zylah 🐶💗";
+
+    }
+
+    else if (currentPhoto < 25) {
+
+        photoTitle.textContent =
+            "Growing Zylah 🐾❤️";
+
+    }
+
+    else if (currentPhoto < 40) {
+
+        photoTitle.textContent =
+            "Big Girl Zylah 🐶💕";
+
+    }
+
+    else {
+
+        photoTitle.textContent =
+            "Our Beautiful Zylah ❤️🐾";
+
+    }
+
 }
 
 
-nextBtn.addEventListener("click", () => {
+/* =========================
+   NEXT BUTTON
+========================= */
+
+nextBtn.addEventListener("click", function () {
 
     currentPhoto++;
 
     if (currentPhoto >= photos.length) {
+
         currentPhoto = 0;
+
     }
 
     showPhoto();
+
 });
 
 
-previousBtn.addEventListener("click", () => {
+/* =========================
+   PREVIOUS BUTTON
+========================= */
+
+previousBtn.addEventListener("click", function () {
 
     currentPhoto--;
 
     if (currentPhoto < 0) {
-        currentPhoto = photos.length - 1;
+
+        currentPhoto =
+            photos.length - 1;
+
     }
 
     showPhoto();
+
 });
 
+
+/* =========================
+   FIRST PHOTO
+========================= */
 
 showPhoto();

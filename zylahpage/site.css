@@ -17,6 +17,11 @@ body {
     overflow-x: hidden;
 }
 
+
+/* =========================
+   PAGE
+========================= */
+
 .page {
     width: 90%;
     max-width: 900px;
@@ -28,9 +33,16 @@ body {
     text-align: center;
 }
 
+
+/* =========================
+   TITLE
+========================= */
+
 h1 {
     font-size: 48px;
+
     margin-bottom: 10px;
+
     color: #d92f68;
 
     text-shadow:
@@ -40,14 +52,22 @@ h1 {
 
 .subtitle {
     font-size: 20px;
+
     color: #70394c;
 }
 
 .intro {
     font-size: 18px;
+
     margin-bottom: 35px;
+
     color: #8a4057;
 }
+
+
+/* =========================
+   GROWTH SECTION
+========================= */
 
 .growth-section {
     background: rgba(255, 247, 250, 0.95);
@@ -62,8 +82,14 @@ h1 {
     border: 3px solid white;
 }
 
+
+/* =========================
+   PHOTO FRAME
+========================= */
+
 .photo-frame {
     width: 100%;
+
     max-width: 650px;
 
     height: 500px;
@@ -80,7 +106,9 @@ h1 {
         0 10px 30px rgba(0, 0, 0, 0.15);
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     overflow: hidden;
@@ -88,17 +116,25 @@ h1 {
 
 .photo-frame img {
     width: 100%;
+
     height: 100%;
 
     object-fit: contain;
 
     border-radius: 18px;
 
-    transition: opacity 0.3s ease;
+    /* Instant image switching */
+    transition: none;
 }
+
+
+/* =========================
+   PHOTO TITLE
+========================= */
 
 #photoTitle {
     margin-top: 25px;
+
     margin-bottom: 5px;
 
     color: #d92f68;
@@ -108,11 +144,18 @@ h1 {
 
 #photoNumber {
     color: #9a5269;
+
     font-weight: bold;
 }
 
+
+/* =========================
+   BUTTONS
+========================= */
+
 .buttons {
     display: flex;
+
     justify-content: center;
 
     gap: 15px;
@@ -142,6 +185,7 @@ button {
 
 button:hover {
     background: #c9275d;
+
     transform: translateY(-3px);
 
     box-shadow:
@@ -151,6 +195,11 @@ button:hover {
 button:active {
     transform: scale(0.95);
 }
+
+
+/* =========================
+   MESSAGE
+========================= */
 
 .message {
     margin-top: 40px;
@@ -163,6 +212,11 @@ button:active {
 
     font-weight: bold;
 }
+
+
+/* =========================
+   BACK BUTTON
+========================= */
 
 .back-button {
     display: inline-block;
@@ -189,16 +243,24 @@ button:active {
 
 .back-button:hover {
     background: #fff0f5;
+
     transform: translateY(-3px);
 }
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
 
 .floating-hearts {
     position: fixed;
 
     top: 0;
+
     left: 0;
 
     width: 100%;
+
     height: 100%;
 
     pointer-events: none;
@@ -213,6 +275,11 @@ button:active {
 
     line-height: 100px;
 }
+
+
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 600px) {
 

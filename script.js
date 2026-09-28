@@ -1,22 +1,34 @@
 function openLetter() {
+
     const letter = document.getElementById("letterContainer");
+
     const button = document.getElementById("openLetterBtn");
 
-    // Show the letter
+
+    // Make the letter visible
     letter.style.display = "flex";
 
-    // Add animation
+
+    // Add the animation
     letter.classList.add("open");
 
-    // Change button
+
+    // Change the button
     button.innerHTML = "❤️ Letter Opened ❤️";
+
+
+    // Disable the button
     button.disabled = true;
 
-    // Scroll to letter
+
+    // Scroll down to the letter
     setTimeout(function () {
+
         letter.scrollIntoView({
             behavior: "smooth",
             block: "start"
         });
+
     }, 200);
+
 }

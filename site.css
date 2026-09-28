@@ -37,7 +37,7 @@ body {
 
     line-height: 1;
 
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 
     animation: heartbeat 2s infinite ease-in-out;
 }
@@ -97,7 +97,10 @@ body {
 
 .open-button:disabled {
     cursor: default;
-    opacity: 0.8;
+
+    opacity: 0.9;
+
+    transform: none;
 }
 
 
@@ -105,11 +108,7 @@ body {
    LETTER
 ========================= */
 
-/*
-   IMPORTANT:
-   The letter is completely hidden
-   when the page first loads.
-*/
+/* Letter is HIDDEN when website opens */
 
 .letter-container {
     display: none;
@@ -120,10 +119,7 @@ body {
 }
 
 
-/*
-   JavaScript adds "open"
-   after the button is clicked.
-*/
+/* JavaScript adds .open */
 
 .letter-container.open {
     display: flex;
@@ -190,7 +186,7 @@ body {
 ========================= */
 
 .zylah-surprise {
-    margin: 35px 0 35px;
+    margin: 35px 0;
 
     padding: 25px 18px 22px;
 
@@ -211,9 +207,9 @@ body {
 }
 
 .zylah-paw {
-    font-size: 34px;
+    font-size: 32px;
 
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 .zylah-text {
@@ -238,7 +234,7 @@ body {
 .zylah-button {
     display: inline-block;
 
-    padding: 13px 24px;
+    padding: 13px 22px;
 
     background: linear-gradient(
         135deg,
@@ -248,13 +244,13 @@ body {
 
     color: white !important;
 
-    text-decoration: none !important;
+    text-decoration: none;
 
     border-radius: 30px;
 
     font-family: "Caveat", cursive;
 
-    font-size: 22px;
+    font-size: 21px;
 
     font-weight: 600;
 
@@ -265,7 +261,7 @@ body {
 }
 
 .zylah-button:hover {
-    transform: scale(1.06) rotate(-1deg);
+    transform: scale(1.06);
 
     box-shadow:
         0 8px 18px rgba(214, 45, 101, 0.35);
@@ -275,6 +271,11 @@ body {
     transform: scale(0.98);
 }
 
+
+/* =========================
+   ZYLAH HINT
+========================= */
+
 .zylah-hint {
     margin: 14px 0 0 !important;
 
@@ -282,7 +283,7 @@ body {
 
     font-family: "Caveat", cursive !important;
 
-    font-size: 19px !important;
+    font-size: 18px !important;
 
     line-height: 1.2 !important;
 }
@@ -293,7 +294,7 @@ body {
 ========================= */
 
 .letter h3 {
-    margin: 20px 0 25px;
+    margin: 25px 0;
 
     color: #e13270;
 
@@ -340,18 +341,15 @@ body {
 
 }
 
-
 @keyframes letterAppear {
 
     from {
         opacity: 0;
-
         transform: translateY(30px);
     }
 
     to {
         opacity: 1;
-
         transform: translateY(0);
     }
 
@@ -365,7 +363,7 @@ body {
 @media (max-width: 600px) {
 
     .hero {
-        padding: 20px 15px 30px;
+        padding: 25px 15px 35px;
     }
 
     .big-heart {
@@ -397,9 +395,9 @@ body {
     }
 
     .zylah-button {
-        font-size: 20px;
+        font-size: 19px;
 
-        padding: 12px 18px;
+        padding: 11px 16px;
     }
 
     .letter h3 {

@@ -1,27 +1,24 @@
 function openLetter() {
 
     const letter = document.getElementById("letterContainer");
-
     const button = document.getElementById("openLetterBtn");
 
+    // Make sure both elements exist
+    if (!letter || !button) {
+        console.error("Letter or button was not found.");
+        return;
+    }
 
-    // Make the letter visible
-    letter.style.display = "flex";
-
-
-    // Add the animation
+    // Show the letter
     letter.classList.add("open");
 
-
     // Change the button
-    button.innerHTML = "❤️ Letter Opened ❤️";
-
+    button.textContent = "❤️ Letter Opened ❤️";
 
     // Disable the button
     button.disabled = true;
 
-
-    // Scroll down to the letter
+    // Smoothly scroll to the letter
     setTimeout(function () {
 
         letter.scrollIntoView({
@@ -30,5 +27,4 @@ function openLetter() {
         });
 
     }, 200);
-
 }
